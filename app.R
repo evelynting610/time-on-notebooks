@@ -3,9 +3,9 @@
 #
 
 library(shiny)
-library(tidyr)
 library(ggplot2)
 library(civis)
+
 
 df <- read_civis("civis_platform.notebook_time_org", database = "redshift-general")
 
