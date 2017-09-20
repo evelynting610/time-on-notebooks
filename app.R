@@ -21,17 +21,12 @@ ui <- fluidPage(
       selectInput("company", "Select a company", choices)
     ),
     mainPanel(
-      plotOutput("plot"),
-      textOutput("test")
+      plotOutput("plot")
     )
   )
 )
 
 server <- function(input, output) {
-  
-  output$test <- renderText({
-    paste("Shiny app loaded and works!")
-  })
   
   output$plot <- renderPlot({
     company_info <- subset(df, organization == input$company, select = c(week_end, mins_spent))
