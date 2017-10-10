@@ -1,1 +1,0 @@
-devtools::install_github("civisanalytics/civis-r")
